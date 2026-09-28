@@ -1,0 +1,61 @@
+{
+  "laudo_01.txt": {
+    "tipo_imovel": {"estado": "encontrado", "contem": ["apartamento"]},
+    "endereco": {"estado": "encontrado", "contem": ["Rua das Acácias", "São Paulo"]},
+    "area_privativa_m2": {"estado": "encontrado", "valor": 78.4},
+    "area_total_m2": {"estado": "encontrado", "valor": 102.1},
+    "ano_construcao": {"estado": "encontrado", "valor": 2014},
+    "valor_avaliacao_brl": {"estado": "encontrado", "valor": 642000},
+    "matricula": {"estado": "encontrado", "valor": "184.772"},
+    "onus": {"estado": "encontrado", "contem": ["não foram identificados ônus"]},
+    "data_vistoria": {"estado": "encontrado", "valor": "2025-03-12"},
+    "responsavel_tecnico": {"estado": "encontrado", "contem": ["Marina Albuquerque"]}
+  },
+  "laudo_03.txt": {
+    "tipo_imovel": {"estado": "encontrado", "contem": ["sala comercial"]},
+    "endereco": {"estado": "encontrado", "contem": ["Rua do Comércio", "Curitiba"]},
+    "area_util_m2": {"estado": "encontrado", "valor": 54.8},
+    "area_comum_m2": {"estado": "encontrado", "valor": 18.2},
+    "area_total_m2": {"estado": "ausente"},
+    "ano_construcao": {"estado": "ausente"},
+    "valor_avaliacao_brl": {"estado": "encontrado", "valor": 395500},
+    "matricula": {"estado": "encontrado", "valor": "77.201"},
+    "onus": {"estado": "encontrado", "contem": ["alienação fiduciária"]},
+    "data_vistoria": {"estado": "encontrado", "valor": "2025-03-22"},
+    "responsavel_tecnico": {"estado": "encontrado", "contem": ["Beatriz Nunes"]}
+  },
+  "laudo_04.txt": {
+    "tipo_imovel": {"estado": "encontrado", "contem": ["terreno"]},
+    "endereco": {"estado": "encontrado", "contem": ["Rua Ipê Amarelo", "Goiânia"]},
+    "area_terreno_m2": {"estado": "encontrado", "valor": 360},
+    "ano_construcao": {"estado": "nao_aplicavel"},
+    "valor_avaliacao_brl": {"estado": "encontrado", "valor": 218000},
+    "matricula": {"estado": "encontrado", "valor": "102.334"},
+    "onus": {"estado": "ausente"},
+    "data_vistoria": {"estado": "encontrado", "valor": "2025-04-02"},
+    "responsavel_tecnico": {"estado": "encontrado", "contem": ["Paulo Sérgio Reis"]}
+  },
+  "laudo_08.txt": {
+    "tipo_imovel": {"estado": "encontrado", "contem": ["loja"]},
+    "endereco": {"estado": "encontrado", "contem": ["Rua Sete de Setembro", "Salvador"]},
+    "area_construida_m2": {"estado": "encontrado", "valor": 118},
+    "ano_construcao": {"estado": "ausente"},
+    "valor_avaliacao_brl": {"estado": "encontrado", "valor": 910000},
+    "matricula": {"estado": "ausente"},
+    "onus": {"estado": "ausente"},
+    "data_vistoria": {"estado": "encontrado", "valor": "2025-04-29"},
+    "responsavel_tecnico": {"estado": "encontrado", "contem": ["Luciana Prado"]}
+  },
+  "laudo_17.txt": {
+    "tipo_imovel": {"estado": "encontrado", "contem": ["apartamento"]},
+    "endereco": {"estado": "encontrado", "contem": ["Rua Harmonia", "São Paulo"]},
+    "area_privativa_m2": {"estado": "encontrado", "valor": 70},
+    "area_total_m2": {"estado": "conflito"},
+    "ano_construcao": {"estado": "encontrado", "valor": 2015},
+    "valor_avaliacao_brl": {"estado": "encontrado", "valor": 610000},
+    "matricula": {"estado": "encontrado", "valor": "176.543"},
+    "onus": {"estado": "encontrado", "contem": ["declaração do proprietário", "certidão não anexada"]},
+    "data_vistoria": {"estado": "encontrado", "valor": "2025-06-25"},
+    "responsavel_tecnico": {"estado": "encontrado", "contem": ["Marina Albuquerque"]}
+  }
+}

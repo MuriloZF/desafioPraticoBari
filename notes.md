@@ -96,3 +96,8 @@ O meu foco na parte 1.4 será:
 A parte 2 tem apenas uma tarefa, que é criar uma automação para gerar um relatório, por praticidade e compatibilidade, vou gerar o relatório em HTML.
 Mais um detalhe do dataset, ao gerar um relatório para testar, descobri que há 981 propostas com um LTV acima de 60%.
 ### Tempo para Parte 2: Aproximadamente 1h
+
+## Parte 3
+A minha primeira ideia foi utilizar IA local, para não precisar comprar tokens, porém, não tive sucesso rodando o script com o Granite 4.2, creio que pelo modelo ser muito pequeno, o contexto acabou ficando muito grande.
+Acabei tendo que usar um agente cloud mesmo, então o escolhido foi o GPT 5.6-Terra, por ser um agente competente mas barato, utilizando o Codex.
+### Tempo para a Parte 3: Aproximadamente 2h
