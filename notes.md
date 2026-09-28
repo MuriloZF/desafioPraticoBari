@@ -25,3 +25,42 @@ Por fim, voltando ao `valor_imovel`, o problema era bem simples: existem algumas
 Analisando data_entrada, há três entradas com o formato errado, ao invés de aaaa-mm-dd usam dd/mm/aaaa, irei normalizar elas para o formato correto. Após a normalização, irei fazer mais testes com as datas.
 Ainda na data_entrada, há uma instância em que a data_assinatura ocorreu antes da data_entrada, analisando a linha completa, esses valores parecem ser os únicos errados, portanto, presumo que estão invertidos. Irei trocá-los de ordem e utilizar a linha normalmente.
 ### Tempo: Aproximadamente 1h30
+
+## Step 1
+
+Temos quatro objetivos:
+
+- 1.1 - Em qual etapa perdemos mais dinheiro?
+
+- 1.2 - O que a liderança considera adequado? A taxa de aceitação está diminuindo?
+
+- 1.3 - Qual característica está mais relacionada à contratação?
+
+- 1.4 - Três recomendações.
+
+Acredito que 1.3 seja a tarefa mais simples do primeiro passo, então vou começar por ela.
+
+Para isso, pretendo utilizar `Mutual Information`, já que temos uma combinação de variáveis numéricas e categóricas.
+
+Vantagens dessa abordagem
+
+- MI pode ser utilizada com diferentes tipos de dados e, como nosso dataset possui tanto variáveis numéricas quanto categóricas, isso é importante para a análise;
+
+- Ela consegue identificar tanto dependências lineares quanto não lineares, o que pode ser útil para entender melhor a relação entre as variáveis.
+
+Desvantagens dessa abordagem
+
+- Não escala tão bem, podendo ser mais custosa computacionalmente do que uma correlação simples;
+
+- Talvez seja necessário converter o resultado para uma métrica mais específica para facilitar sua interpretação;
+
+- Se houver muitos outliers, o resultado de MI pode ficar mais ruidoso.
+
+- Não indica direção da relação.
+
+Foi utilizado `ordinalEncoder` para representar as variáveis categóricas numericamente (e.g: `Curitiba = 0` e `São Paulo = 1`.
+Esses valores servem apenas como uma representação, não tendo uma ordem de grandeza.
+
+Além disso, foi calculado a taxa e contratação para cada variável.
+
+### Tempo: Aproximadamente 2h30
