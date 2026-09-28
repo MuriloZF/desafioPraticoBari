@@ -41,6 +41,6 @@ Para refazer a extração, instale o Codex CLI, entre com `codex login` usando s
 - `scripts/valorFunil.py`, `desempenho.py`, `relacao.py` e `recomendacao.py`: análises da Parte 1; `graficos/` e `recomendacoes.md`: resultados.
 - `scripts/automacao.py` e `instrucoesAutomacao.md`: rotina semanal e instruções da Parte 2; `relatorios/`: HTMLs e log.
 - `scripts/extracao.py`, `EXTRACAO.md` e `avaliacao_laudos/`: extração, instruções, referência manual e resultados da Parte 3.
-- `notes.md`: decisões e tratamento dos dados; `DIARIO.md`: uso de IA, aprendizados e autocrítica.
+- `notes.md`: decisões e tratamento dos dados; `DIARIO.md`: uso de IA, aprendizados e autocrítica; `RESUMO_EXECUTIVO.md`: conclusões para a liderança.
 
 Tempo registrado em `notes.md`: aproximadamente **10h20** nas etapas 0 a 3, sem contar a revisão final da documentação.

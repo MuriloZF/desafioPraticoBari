@@ -49,14 +49,15 @@ monthly_channel["conversao"] = (
 print(monthly_channel)
 
 # Comparação geral na primeira e segunda metade de 2025
-df["periodo"] = np.where(
-    df["data_entrada"] < "2025-07-01",
+df_2025 = df[df["data_entrada"].dt.year == 2025].copy()
+df_2025["periodo"] = np.where(
+    df_2025["data_entrada"].dt.month <= 6,
     "2025-H1",
     "2025-H2"
 )
 
 comparison = (
-    df.groupby("periodo")
+    df_2025.groupby("periodo")
       .agg(
           propostas=("status_final", "size"),
           contratadas=("status_final", lambda x: (x == "Contratada").sum())
