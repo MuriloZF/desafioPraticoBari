@@ -54,3 +54,64 @@ print(df[df["valor_solicitado"] >= df["valor_imovel"]
     "valor_imovel",
     "valor_solicitado",
     "status_final"]])
+
+print("============= Análise formato data_assinatura_contrato =============")
+print(df.loc[~df["data_assinatura_contrato"].astype("string").str.fullmatch(r"\d{4}-\d{2}-\d{2}"),
+              ["id_proposta", "data_assinatura_contrato"]].to_string(index=False))
+
+print("============= Análise formato data_entrada =============")
+mask = df["data_entrada"].astype("string").str.match(r"^\d{2}/\d{2}/\d{4}$")
+
+print(
+    df.loc[
+        mask,
+        ["id_proposta", "data_entrada"]
+    ].to_string(index=False)
+)
+
+df.loc[mask, "data_entrada"] = pd.to_datetime(
+    df.loc[mask, "data_entrada"],
+    format="%d/%m/%Y"
+).astype("string")
+
+df["data_entrada"] = pd.to_datetime(df["data_entrada"])
+df["data_assinatura_contrato"] = pd.to_datetime(df["data_assinatura_contrato"])
+
+print(
+    df.loc[
+        mask,
+        ["id_proposta", "data_entrada"]
+    ].to_string(index=False)
+)
+
+print("============= Análise data_entrada/data_assinatura_contrato =============")
+
+mask = df["data_entrada"] > df["data_assinatura_contrato"]
+
+print(
+    df.loc[
+        mask,
+        [
+            "id_proposta",
+            "data_entrada",
+            "data_assinatura_contrato",
+            "status_final",
+        ]
+    ].to_string(index=False)
+)
+
+df.loc[mask, ["data_entrada", "data_assinatura_contrato"]] = (
+    df.loc[mask, ["data_assinatura_contrato", "data_entrada"]].to_numpy()
+)
+
+print(
+    df.loc[
+        mask,
+        [
+            "id_proposta",
+            "data_entrada",
+            "data_assinatura_contrato",
+            "status_final",
+        ]
+    ].to_string(index=False)
+)
