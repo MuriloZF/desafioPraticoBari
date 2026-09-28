@@ -1,6 +1,6 @@
 # Minhas anotações
 
-## Step 0
+## Parte 0
 
 Antes de começar a trabalhar em qualquer um dos passos propostos, vou primeiro estudar o dataset.
 
@@ -28,7 +28,7 @@ Ainda na data_entrada, há uma instância em que a data_assinatura ocorreu antes
 Outra informação errada: taxa_juros_aa sugere que a taxa é anual, mas na verdade é mensal, o valor da taxa parece confirmar que realmente é mensal.
 ### Tempo: Aproximadamente 1h30
 
-## Step 1
+## Parte 1
 
 Temos quatro objetivos:
 
@@ -65,9 +65,9 @@ Esses valores servem apenas como uma representação, não tendo uma ordem de gr
 
 Além disso, foi calculado a taxa e contratação para cada variável.
 
-### Tempo Step 1.3: Aproximadamente 2h30
+### Tempo Parte 1.3: Aproximadamente 2h30
 
-Agora vou fazer em ordem, então o próximo passo é o step 1.1
+Agora vou fazer em ordem, então o próximo passo é a parte 1.1
 
 Bem, eu não tenho todos os dados necessários para fazer esse cálculo de forma correta, ainda assim pensei em utilizar a fórmula `FV = P(1 + r) ** n`.
 Após executar o código e perceber que todos os valores eram 0, resolvi fazer um teste no dataset e percebi que o juros só é apresentado para clientes que chegaram no estágio 6, logo, essa fórmula é inútil.
@@ -75,11 +75,17 @@ Irei fazer da forma mais simples então, vou fazer um somatório com o valor_sol
 
 A etapa três é a com o maior valor_solicitado, com 703.5M. A diferença dela para as demais é um tanto grande.
 Isso indica que possivelmente a etapa 3 seja a que perdemos mais valor, mas novamente, falta dados para calcular com certeza.
-### Tempo Step 1.1: Aproximadamente 1h30
+### Tempo Parte 1.1: Aproximadamente 1h30
 
-No step 1.2, a percepção da liderença não se confirma muito bem, a taxa de conversão teve uma queda brusca em dois meses: 2025-07 e 2025-11, mas teve um aumento brusco em 2025-11.
+Na parte 1.2, a percepção da liderença não se confirma muito bem, a taxa de conversão teve uma queda brusca em dois meses: 2025-07 e 2025-11, mas teve um aumento brusco em 2025-11.
 O problema de analisar a taxa de conversão assim, é que não leva em consideração o número de propostas, que vem caindo muito durante o ano inteiro.
 Os correspondentes tiveram uma pequena piora na taxa de conversão, mas de novo, não é justo falar que pioraram, tendo em vista que o número de propostas caiu muito.
 No mais, a queda na taxa de conversão é um padrão geral, não apenas dos correspondentes.
-Como foi visto no step 1.1, a etapa em que perdemos mais valor a princípio é a etapa 3.
-### Tempo Step 1.2: 50 minutos
+Como foi visto na parte 1.1, a etapa em que perdemos mais valor a princípio é a etapa 3.
+### Tempo Parte 1.2: 50 minutos
+
+O meu foco na parte 1.4 será:
+- Score: Na faixa de 733 - 990 a taxa de contratação é um tanto maior: 30.06%, contra 22.59% da segunda maior taxa.
+- Priorizar o aumento de propostas - Como foi identificado, houve uma queda no número de propostas durante todo o ano de 2025.
+- Entender o por que a taxa de conversão dos correspondentes é tão baixa - Os correspondentes possuem uma taxa de conversão muito baixa (14.28%). No último mês tiveram um aumento muito bom, mas o número de propostas é baixo.
+### Tempo parte 1.4: Aproximadamente 1h
