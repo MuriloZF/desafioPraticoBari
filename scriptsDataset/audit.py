@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("../data/propostas_credito.csv")
+df = pd.read_csv("data/propostas_credito.csv")
 
 print("============= Shape =============")
 print(df.shape)
