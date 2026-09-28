@@ -26,6 +26,8 @@ Analisando data_entrada, há três entradas com o formato errado, ao invés de a
 Ainda na data_entrada, há uma instância em que a data_assinatura ocorreu antes da data_entrada, analisando a linha completa, esses valores parecem ser os únicos errados, portanto, presumo que estão invertidos. Irei trocá-los de ordem e utilizar a linha normalmente.
 
 Outra informação errada: taxa_juros_aa sugere que a taxa é anual, mas na verdade é mensal, o valor da taxa parece confirmar que realmente é mensal.
+
+Após fazer a parte 2, descobri outro problema do dataset, á 981 propostas em que o LTV é maior que 60%, não acho que preciso mudar algo da parte 1 por conta disso, pois não acho que interfira nas observações que fiz, mas ainda assim, é bom ter essa noção de que há propostas acima da política interna.
 ### Tempo: Aproximadamente 1h30
 
 ## Parte 1
@@ -89,3 +91,8 @@ O meu foco na parte 1.4 será:
 - Priorizar o aumento de propostas - Como foi identificado, houve uma queda no número de propostas durante todo o ano de 2025.
 - Entender o por que a taxa de conversão dos correspondentes é tão baixa - Os correspondentes possuem uma taxa de conversão muito baixa (14.28%). No último mês tiveram um aumento muito bom, mas o número de propostas é baixo.
 ### Tempo parte 1.4: Aproximadamente 1h
+
+## Parte 2
+A parte 2 tem apenas uma tarefa, que é criar uma automação para gerar um relatório, por praticidade e compatibilidade, vou gerar o relatório em HTML.
+Mais um detalhe do dataset, ao gerar um relatório para testar, descobri que há 981 propostas com um LTV acima de 60%.
+### Tempo para Parte 2: Aproximadamente 1h
